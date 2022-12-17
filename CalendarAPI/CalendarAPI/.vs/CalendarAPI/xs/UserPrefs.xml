@@ -1,0 +1,39 @@
+﻿<Properties StartupConfiguration="{D913FF9D-2DE7-40DB-AA1D-07C6D49BD30C}|Default">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.CalendarAPI PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+    <Files>
+      <File FileName="Authentication/Repositories/UserRepository.cs" />
+      <File FileName="Authentication/Models/Requests/NewUser.cs" />
+      <File FileName="Models/CalendarDBContext.cs" />
+      <File FileName="Program.cs" Line="18" Column="39" />
+      <File FileName="CalendarAPI.csproj" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CalendarAPI" expanded="True">
+            <Node name="CalendarAPI" expanded="True">
+              <Node name="Authentication" expanded="True">
+                <Node name="Controllers" expanded="True" />
+                <Node name="Models" expanded="True">
+                  <Node name="Requests" expanded="True" />
+                </Node>
+                <Node name="Repositories" expanded="True" />
+                <Node name="Services" expanded="True" />
+                <Node name="Utils" expanded="True" />
+              </Node>
+              <Node name="Models" expanded="True" />
+              <Node name="Properties" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>
