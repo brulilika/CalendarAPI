@@ -16,7 +16,7 @@ namespace CalendarAPI.Authentication.Repositories
             {
                 using (var ctx = new CalendarDBContext())
                 {
-                    User existUser = ctx.Users.Find(userMail);
+                    User existUser = ctx.Users.Where(w=>w.Email ==userMail).FirstOrDefault();
 
                     return existUser;
                 }
@@ -28,7 +28,7 @@ namespace CalendarAPI.Authentication.Repositories
             }
         }
 
-        public async Task<User?> CadastroDeUserAsync(User newUser)
+        public async Task<object> CadastroDeUserAsync(User newUser)
         {
             try
             {
@@ -42,8 +42,13 @@ namespace CalendarAPI.Authentication.Repositories
                     {
                         ctx.Users.Add(newUser);
                         ctx.SaveChanges();
-
-                        return existUser;
+                        existUser = await GetUserByEmail(newUser.Email);
+                        return new
+                            {
+                                Id = existUser.Id,
+                                Email = existUser.Email,
+                                Name = existUser.Name
+                            };
                     }
                 }
                 else

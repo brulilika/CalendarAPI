@@ -4,5 +4,17 @@
         <name>CalendarAPI</name>
     </assembly>
     <members>
+        <member name="T:CalendarAPI.Migrations.InitialCommit">
+            <inheritdoc />
+        </member>
+        <member name="M:CalendarAPI.Migrations.InitialCommit.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:CalendarAPI.Migrations.InitialCommit.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:CalendarAPI.Migrations.InitialCommit.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
     </members>
 </doc>

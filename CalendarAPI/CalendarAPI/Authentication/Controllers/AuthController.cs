@@ -35,7 +35,7 @@ namespace CalendarAPI.Authentication.Controllers
                     Password = newuser.password
                 };
 
-                usu = await userRepository.CadastroDeUserAsync(usu);
+                var insertedUsu = await userRepository.CadastroDeUserAsync(usu);
                 if (usu.Id == 0)
                 {
                     return UnprocessableEntity(
@@ -48,7 +48,7 @@ namespace CalendarAPI.Authentication.Controllers
                 }
                 else
                 {
-                    return Created($"/{usu.Id}", usu);
+                    return Created($"New User:", insertedUsu);
                 }
             }
             catch (Exception ex)

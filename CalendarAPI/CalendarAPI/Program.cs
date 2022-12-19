@@ -5,6 +5,9 @@ using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using CalendarAPI.Authentication.Utils;
 using Microsoft.IdentityModel.Tokens;
+using CalendarAPI.Authentication.Models.Requests;
+using CalendarAPI.Authentication.Repositories;
+using CalendarAPI.Authentication.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 var key = Encoding.ASCII.GetBytes(builder.Configuration.GetSection("TokenConfigurations").GetSection("JwtKey").Value);
@@ -62,6 +65,10 @@ builder.Services.AddAuthentication(authOptions =>
         ValidateIssuer = false
     };
 });
+
+builder.Services.AddScoped<UserRepository>();
+builder.Services.AddScoped<TokenService>();
+
 
 var app = builder.Build();
 
