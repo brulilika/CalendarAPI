@@ -27,8 +27,8 @@ builder.Services.AddSwaggerGen(s =>
         TermsOfService = new Uri("https://example.com/terms")
     });
 
-    var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-    s.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
+    //var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    //s.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
 
 
     s.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
@@ -80,12 +80,10 @@ app.UseCors(builder => builder
 .AllowAnyHeader()
 );
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+
+app.UseSwagger();
+app.UseSwaggerUI();
+
 
 app.UseHttpsRedirection();
 

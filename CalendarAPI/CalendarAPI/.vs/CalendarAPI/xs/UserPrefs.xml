@@ -6,21 +6,20 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
     <Files>
-      <File FileName="Repositories/EventRepository.cs" />
-      <File FileName="Controllers/EventController.cs" Line="61" Column="28" />
-      <File FileName="Models/Event.cs" />
-      <File FileName="Program.cs" Line="19" Column="2" />
+      <File FileName="Program.cs" Line="21" Column="1" />
+      <File FileName="appsettings.json" Line="20" Column="1" />
+      <File FileName="appsettings.Development.json" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="CalendarAPI" expanded="True">
             <Node name="CalendarAPI" expanded="True">
-              <Node name="Migrations" expanded="True" />
               <Node name="Models" expanded="True">
                 <Node name="Requests" expanded="True" />
               </Node>
               <Node name="Repositories" expanded="True" />
+              <Node name="appsettings.json" expanded="True" />
               <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
@@ -28,7 +27,7 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
   <MonoDevelop.Ide.ItemProperties.CalendarAPI PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
