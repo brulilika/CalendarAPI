@@ -1,30 +1,40 @@
 ﻿<Properties StartupConfiguration="{D913FF9D-2DE7-40DB-AA1D-07C6D49BD30C}|netbullAPI">
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.CalendarAPI PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/brulilika/Documents/CalendarAPI/CalendarAPI/CalendarAPI/Authentication/Repositories/UserRepository.cs" relfile="Authentication/Repositories/UserRepository.cs" line="59" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/EventController.cs">
     <Files>
-      <File FileName="Authentication/Repositories/UserRepository.cs" />
-      <File FileName="Authentication/Models/Requests/NewUser.cs" />
-      <File FileName="Models/CalendarDBContext.cs" />
-      <File FileName="Program.cs" Line="32" Column="9" />
-      <File FileName="Properties/launchSettings.json" Line="14" Column="29" />
+      <File FileName="Repositories/EventRepository.cs" Line="11" Column="32" />
+      <File FileName="Controllers/EventController.cs" Line="64" Column="1" />
+      <File FileName="Models/Event.cs" Line="14" Column="43" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="CalendarAPI" expanded="True">
             <Node name="CalendarAPI" expanded="True">
-              <Node name="Authentication" expanded="True" />
-              <Node name="Properties" expanded="True" />
+              <Node name="Authentication" expanded="True">
+                <Node name="Controllers" expanded="True" />
+              </Node>
+              <Node name="Controllers" expanded="True" />
+              <Node name="Migrations" expanded="True">
+                <Node name="20221220002929_UpdateEvent.cs" selected="True" />
+              </Node>
+              <Node name="Models" expanded="True">
+                <Node name="Requests" expanded="True" />
+              </Node>
+              <Node name="Repositories" expanded="True" />
+              <Node name="appsettings.json" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.CalendarAPI PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

@@ -5,7 +5,7 @@ namespace CalendarAPI.Models
 	{
 		TIPO1,
 		TIPO2,
-		TIPO3
+		TIPO3,
 	}
 }
 

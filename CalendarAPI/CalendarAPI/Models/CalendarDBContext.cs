@@ -12,7 +12,7 @@ namespace CalendarAPI.Database
 		}
 
         public DbSet<User> Users { get; set; }
-        //public DbSet<Event> Events { get; set; }
+        public DbSet<Event> Events { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

@@ -43,6 +43,8 @@
     <None Remove="Authentication\Repositories\" />
     <None Remove="Authentication\Models\Requests\" />
     <None Remove="Authentication\Services\" />
+    <None Remove="Repositories\" />
+    <None Remove="Models\Requests\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Authentication\" />
@@ -51,5 +53,7 @@
     <Folder Include="Authentication\Repositories\" />
     <Folder Include="Authentication\Models\Requests\" />
     <Folder Include="Authentication\Services\" />
+    <Folder Include="Repositories\" />
+    <Folder Include="Models\Requests\" />
   </ItemGroup>
 </Project>
