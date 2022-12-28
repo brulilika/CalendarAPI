@@ -21,7 +21,7 @@ builder.Services.AddSwaggerGen(s =>
 
     s.SwaggerDoc("v1", new OpenApiInfo
     {
-        Title = "CalendarAPI",
+        Title = "CalendarAPI - TCC",
         Version = "v1",
         Description = "ASP.NET Core Web API para controle de eventos registrados por um usuário",
         TermsOfService = new Uri("https://example.com/terms")
