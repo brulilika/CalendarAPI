@@ -1,34 +1,33 @@
-﻿<Properties StartupConfiguration="{C873967E-FD50-4A4F-80B7-4C0A6B4E6129}|Default">
+﻿<Properties StartupConfiguration="{C873967E-FD50-4A4F-80B7-4C0A6B4E6129}|netbullAPI">
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.CalendarAPI PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workbench ActiveDocument="CalendarAPI/Program.cs">
     <Files>
-      <File FileName="CalendarAPI/Models/CalendarDBContext.cs" />
-      <File FileName="CalendarAPI/appsettings.json" />
+      <File FileName="CalendarAPI/Models/CalendarDBContext.cs" Line="24" Column="89" />
+      <File FileName="CalendarAPI/appsettings.json" Line="10" Column="24" />
       <File FileName="CalendarAPI/Models/Event.cs" />
-      <File FileName="CalendarAPI/Models/User.cs" />
       <File FileName="CalendarAPI/Models/EventType.cs" />
       <File FileName="CalendarAPI/Models/EventPriority.cs" />
-      <File FileName="CalendarAPI/Program.cs" Line="14" Column="53" />
+      <File FileName="CalendarAPI/Program.cs" Line="38" Column="27" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="CalendarAPI" expanded="True">
             <Node name="CalendarAPI" expanded="True">
-              <Node name="Authentication" selected="True" />
-              <Node name="Controllers" expanded="True" />
               <Node name="Models" expanded="True" />
-              <Node name="Properties" expanded="True" />
+              <Node name="Properties" expanded="True">
+                <Node name="PublishProfiles" expanded="True" />
+              </Node>
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.CalendarAPI PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
 </Properties>

@@ -51,7 +51,8 @@ namespace CalendarAPI.Controllers
             var t = handler.ReadJwtToken(accessToken).Payload;
 
             var createRepo = await eventRepository.CreateEvent(createEvent, Convert.ToUInt16(t.GetValueOrDefault("userId")));
-            
+            await eventRepository.OrganizeEvents(createRepo.EndEventDate, Convert.ToUInt16(t.GetValueOrDefault("userId")));
+
             return Ok(createRepo);
         }
 

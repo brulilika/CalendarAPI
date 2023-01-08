@@ -25,6 +25,8 @@ namespace CalendarAPI.Repositories
             }
         }
 
+        
+
         public async Task<Event> GetEventsById(int eventId)
         {
             try
@@ -35,6 +37,61 @@ namespace CalendarAPI.Repositories
                     
                     return existEvent;
                    
+                }
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
+        public async Task<List<Event>> OrganizeDateEvents(List<Event> eventos)
+        {
+            try
+            {
+                List<Event> responseList = new List<Event>();
+                for (int i = 1; i < eventos.Count(); i++)
+                {
+                    if (eventos[i].EventType == eventos[i - 1].EventType && eventos[i].EndEventDate.Day == eventos[i - 1].EndEventDate.Day)
+                    {
+                        DateTime auxEventTimeEnd = eventos[i + 1].EndEventDate;
+                        DateTime auxEventTimeStart = eventos[i + 1].StartEventDate;
+
+                        eventos[i + 1].EndEventDate = eventos[i].EndEventDate;
+                        eventos[i + 1].StartEventDate = eventos[i].StartEventDate;
+                        eventos[i].EndEventDate = auxEventTimeEnd;
+                        eventos[i].StartEventDate = auxEventTimeStart;
+                    }
+                }
+
+                return eventos;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
+        public async Task<List<Event>> OrganizeEvents(DateTime date,int userId)
+        {
+            try
+            {
+                using (var ctx = new CalendarDBContext())
+                {
+                    List<Event> eventos = ctx.Events.Where(w => w.UserId == userId && w.EndEventDate.Date == date.Date)?.OrderBy(ob => ob.EndEventDate).ThenBy(tb => tb.EventType).ToList();
+                    Boolean unordered = true;
+                    while (unordered)
+                    {
+                        eventos = (await OrganizeDateEvents(eventos)).OrderBy(ob=>ob.EndEventDate).ToList();
+                        unordered = false;
+                        for (int i = 1; i < eventos.Count(); i++)
+                        {
+                            if (eventos[i].EventType == eventos[i - 1].EventType)
+                                unordered = true;
+                        }
+                    }
+
+                    return eventos;
                 }
             }
             catch (Exception ex)
