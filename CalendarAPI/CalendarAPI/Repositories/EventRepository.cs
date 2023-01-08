@@ -79,18 +79,9 @@ namespace CalendarAPI.Repositories
                 using (var ctx = new CalendarDBContext())
                 {
                     List<Event> eventos = ctx.Events.Where(w => w.UserId == userId && w.EndEventDate.Date == date.Date)?.OrderBy(ob => ob.EndEventDate).ThenBy(tb => tb.EventType).ToList();
-                    Boolean unordered = true;
-                    while (unordered)
-                    {
-                        eventos = (await OrganizeDateEvents(eventos)).OrderBy(ob=>ob.EndEventDate).ToList();
-                        unordered = false;
-                        for (int i = 1; i < eventos.Count(); i++)
-                        {
-                            if (eventos[i].EventType == eventos[i - 1].EventType)
-                                unordered = true;
-                        }
-                    }
-
+                    
+                    eventos = (await OrganizeDateEvents(eventos)).OrderBy(ob=>ob.EndEventDate).ToList();
+                        
                     return eventos;
                 }
             }
